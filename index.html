@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Jogo de escolhas</title>
+</head>
+<body class="apresentacao">
+    <header>
+        <h1 class="apresentacao__titulo">Jogo de escolhas, faça a sua!</h1>
+    </header>
+    <main class="apresentacao__conteudo">
+        <div class="iniciar">
+            <button class="apresentacao__conteudo__botao__iniciar" id="btnini" onclick="iniciarJogo()">INICIAR</button>
+        </div>
+
+        <div id="pergunta1" class="apresentacao__conteudo__div">
+            <p class="apresentacao__texto">Após inúmeras dificuldades na sua vida, você se depara com a Anjalura, um anjo especialmente escolhido para te ajudar a sair desse perrengue. Ele te propõe duas escolhas:</p>
+        
+            <button class="apresentacao__conteudo__botoes" id="frontend" name="frontend" onclick="perguntafront()">Front-End</button>
+            <button class="apresentacao__conteudo__botoes" id="backend" name="backend" onclick="perguntaback()">Back-End</button>
+        </div>
+
+        <div id="respostafront" class="apresentacao__conteudo__div">
+            <p class="apresentacao__texto">Dada a sua escolha Front-End, a Anjalura te propõe ser especialista em uma das seguintes estruturas flexíveis:</p>
+
+            <button class="apresentacao__conteudo__botoes" id="react" name="react" onclick="proxPergunta()">React</button>
+            <button class="apresentacao__conteudo__botoes" id="vue" name="vue" onclick="proxPergunta()">Vue</button>
+        </div>
+
+        <div id="respostaback" class="apresentacao__conteudo__div">
+            <p class="apresentacao__texto">Dada a sua escolha Back-End, a Anjalura te propõe ser especialista em uma das seguintes linguagens:</p>
+
+            <button class="apresentacao__conteudo__botoes" id="c#" name="c#" onclick="proxPergunta()">C#</button>
+            <button class="apresentacao__conteudo__botoes" id="java" name="java"onclick="proxPergunta()">Java</button>
+        </div>
+
+        <div id="pergunta2" class="apresentacao__conteudo__div">
+            <p class="apresentacao__texto">Após algum tempo se especializando na sua escolha, você percebe que já tem o domínio completo dela. A Anjalura propõe outras duas alternativas para sua jornada. Você deseja seguir aprendendo e se especializando cada vez mais na sua área escolhida ou você prefere continuar se desenvolvendo, mas agora em outra área para se tornar um lendário Fullstack?</p>
+
+            <button class="apresentacao__conteudo__botoes" id="espec" name="espec" onclick="ultimaPergunta()">Especializar</button>
+            <button class="apresentacao__conteudo__botoes" id="evoluir" name="evoluir" onclick="ultimaPergunta()">Evoluir</button>
+        </div>
+
+        <div id="pergunta3" class="apresentacao__conteudo__div">
+            <p class="apresentacao__texto">Para conseguir permanecer com seu auxílio, Anjalura lhe faz uma pergunta muito curiosa:
+            </p>
+            <label for="tech" class="apresentacao__texto">- Quais as tecnologias você gostaria de se especializar ou de conhecer?</label>
+                <input type="text" id="tech" name="tech">
+                <button class="apresentacao__conteudo__botao__enviar" id="enviar" name="enviar" onclick="repetepergunta3()">Enviar</button>
+        </div>
+
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
